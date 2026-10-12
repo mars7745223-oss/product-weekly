@@ -1,0 +1,30 @@
+{
+  "schema_version": "product-weekly-issue/2",
+  "record_status": "draft",
+  "issue": {
+    "issue_id": "",
+    "scope_id": "",
+    "window_start": "",
+    "window_end": "",
+    "cutoff_at": "",
+    "timezone": ""
+  },
+  "kiqs": [],
+  "competitors": [],
+  "sources": [],
+  "events": [],
+  "claims": [],
+  "voices": [],
+  "research": [],
+  "inferences": [],
+  "coverage_plan": {
+    "plan_version": "",
+    "origin": "prospective",
+    "locked_at": null,
+    "cells": []
+  },
+  "editorial": {
+    "must_read": [],
+    "decisions": []
+  }
+}

@@ -1,0 +1,12 @@
+[
+  {
+    "weight_version": "DEMO-overlap-plus5",
+    "reason": "教学敏感性情景：将5个百分点由威胁转给任务重叠；不是推荐权重。",
+    "weights": {"customer_overlap": 0.30, "competitive_threat": 0.20, "growth_momentum": 0.15, "capability_advantage": 0.15, "scope_relevance": 0.10, "learning_value": 0.10}
+  },
+  {
+    "weight_version": "DEMO-threat-plus5",
+    "reason": "教学敏感性情景：将5个百分点由任务重叠转给威胁；不是推荐权重。",
+    "weights": {"customer_overlap": 0.20, "competitive_threat": 0.30, "growth_momentum": 0.15, "capability_advantage": 0.15, "scope_relevance": 0.10, "learning_value": 0.10}
+  }
+]

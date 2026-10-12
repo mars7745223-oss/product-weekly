@@ -1,0 +1,10 @@
+{
+  "repository": "https://github.com/mvanhorn/last30days-skill",
+  "commit": "44597357ffe11dfc1e5fbe14b542457dfe37a4c0",
+  "license": "MIT",
+  "included": [
+    "skills/last30days/scripts/**",
+    "LICENSE"
+  ],
+  "excluded": "Upstream SKILL.md presentation/setup contract and unrelated repository files"
+}

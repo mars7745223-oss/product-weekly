@@ -1,0 +1,48 @@
+{
+  "schema_version": "product-weekly-issue/2",
+  "fictional": true,
+  "purpose": "Offline teaching fixture. All brands, quotes, numbers and URLs are invented.",
+  "issue": {
+    "issue_id": "DEMO-001", "scope_id": "DEMO-SCOPE",
+    "window_start": "2026-10-04", "window_end": "2026-10-10",
+    "cutoff_at": "2026-10-10T09:00:00+08:00", "timezone": "Asia/Shanghai"
+  },
+  "kiqs": [{"kiq_id": "Q-1", "question": "同一文件任务的交付条件怎样变化？"}],
+  "competitors": [
+    {"competitor_id": "CMP-DEMO-A", "product_line": "虚构纸舟编辑器", "tier": "Tier 1", "aliases": ["OLD-A"], "tier_history": []},
+    {"competitor_id": "CMP-DEMO-B", "product_line": "虚构云笺助手", "tier": "Tier 2", "aliases": [], "tier_history": []}
+  ],
+  "sources": [
+    {"source_id": "S-1", "url": "https://example.invalid/demo/release", "access_status": "read", "read_scope": "题面发布正文；399美元标价、49美元预约金、预计发货日期"},
+    {"source_id": "S-2", "url": "https://example.invalid/demo/comment/1", "access_status": "read", "read_scope": "题面同一作者的原话与后续更正"},
+    {"source_id": "S-3", "url": "https://example.invalid/demo/community", "access_status": "failed", "read_scope": null}
+  ],
+  "events": [
+    {"event_id": "E-1", "competitor_id": "CMP-DEMO-A", "claim_ids": ["C-1"], "source_ids": ["S-1"], "event_date": "2026-10-06", "new_evidence_date": null, "weekly_status": "new", "delivery_status": "announced"},
+    {"event_id": "E-2", "competitor_id": "CMP-DEMO-A", "claim_ids": ["C-2"], "source_ids": ["S-2"], "event_date": "2026-09-28", "new_evidence_date": null, "weekly_status": "background"}
+  ],
+  "claims": [
+    {"claim_id": "C-1", "competitor_id": "CMP-DEMO-A", "event_id": "E-1", "source_ids": ["S-1"], "statement": "虚构美国页面公布399美元标价和49美元预约金，预计11月交付；没有已交付证据。"},
+    {"claim_id": "C-2", "competitor_id": "CMP-DEMO-A", "event_id": "E-2", "source_ids": ["S-2"], "statement": "虚构用户只使用门店展示机，报告清晰与不适；其两次发言合为一份报告。"}
+  ],
+  "voices": [
+    {"voice_id": "V-1", "competitor_id": "CMP-DEMO-A", "source_ids": ["S-2"], "published_at": "2026-09-28", "collected_at": "2026-10-08", "quote": "教学原话：展示机字幕看得清楚，鼻托有些压。", "identity": "展示机使用自述", "weekly_eligible": false}
+  ],
+  "research": [],
+  "inferences": [
+    {"inference_id": "I-1", "claim_ids": ["C-1"], "voice_ids": ["V-1"], "research_ids": [], "statement": "预约、展示体验与实际交付是不同阶段；旧评论只提供背景。"}
+  ],
+  "coverage_plan": {
+    "plan_version": "DEMO-PLAN-1", "origin": "prospective", "locked_at": "2026-10-04T08:00:00+08:00",
+    "cells": [
+      {"cell_id": "U-1", "competitor_id": "CMP-DEMO-A", "kiq_ids": ["Q-1"], "requirement": "required", "status": "completed", "source_ids": ["S-1"], "checked_scope": "美国发布与预约条件", "checked_at": "2026-10-08", "reason": "核心任务比较"},
+      {"cell_id": "U-2", "competitor_id": "CMP-DEMO-B", "kiq_ids": ["Q-1"], "requirement": "required", "status": "failed", "source_ids": ["S-3"], "checked_scope": null, "checked_at": "2026-10-08", "reason": "题面说明读取失败；不视为无动态"}
+    ]
+  },
+  "editorial": {
+    "must_read": [
+      {"item_id": "M-1", "rank": 1, "event_ids": ["E-1"], "inference_ids": ["I-1"], "reason": "本周新增预约条件直接改变可得性比较；展示机原声不证明正式交付。", "impact_band": "important", "evidence_state": "announced", "review_origin": "teaching_fixture"}
+    ],
+    "decisions": [{"decision_id": "D-1", "event_ids": ["E-2"], "inference_ids": [], "disposition": "background", "reason": "评论在窗外，不作为当周新增"}]
+  }
+}

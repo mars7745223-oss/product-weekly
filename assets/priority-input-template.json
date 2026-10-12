@@ -1,0 +1,13 @@
+{
+  "model": "CPS",
+  "scope": "填写本品参照、具体产品线、任务、地区、研究期限和比较口径",
+  "weight_version": "CPS-1",
+  "ratings": {
+    "customer_overlap": {"score": null, "reason": null, "evidence_refs": []},
+    "competitive_threat": {"score": null, "reason": null, "evidence_refs": []},
+    "growth_momentum": {"score": null, "reason": null, "evidence_refs": []},
+    "capability_advantage": {"score": null, "reason": null, "evidence_refs": []},
+    "scope_relevance": {"score": null, "reason": null, "evidence_refs": []},
+    "learning_value": {"score": null, "reason": null, "evidence_refs": []}
+  }
+}
